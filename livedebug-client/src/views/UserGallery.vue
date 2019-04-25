@@ -57,11 +57,13 @@ export default {
 
   computed: {
     user () {
-      return this.store.state.projects.user
+      // console.log(this.$store.state.projects.data.user)
+      return this.$store.state.projects.data.user
     },
 
     projects () {
-      return this.$store.state.projects.projects
+      console.log(this.$store.state.projects.data.projects)
+      return this.$store.state.projects.data.projects
     }
   },
 

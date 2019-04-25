@@ -8,7 +8,7 @@ class UserController {
       email: req.body.email,
       password: req.body.password
     };
-
+    
     User.create(user)
     .then(user => {
       res.status(201).json(user);

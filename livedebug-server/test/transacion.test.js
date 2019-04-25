@@ -27,19 +27,25 @@ describe('Transactions', function() {
 
     User.create(newUser)
      .then(user => {
+      //  console.log(user, 'awtiannn 0')
        let signUser = {
           id: user._id,
           email: user.email
        };
+      //  console.log(signUser, 'awtiannn')
 
        awtianToken = jwt.sign(signUser);
 
        let newAcc = { userId: user._id };
 
+      //  console.log(newAcc, 'awtiann 2')
+      
        return Account.create(newAcc)
 
-     })
+      })
      .then(acc => {
+       console.log('masukkkk sukses awtian')
+       console.log(acc)
         awtianAccount = acc.accountNumber
         done()
      })
@@ -64,6 +70,8 @@ describe('Transactions', function() {
        wikaToken = jwt.sign(signUser);
 
        let newAcc = { userId: user._id };
+
+      //  console.log(newAcc, 'wikaaa 2')
 
        return Account.create(newAcc)
 

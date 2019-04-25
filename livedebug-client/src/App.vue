@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <navigation :counter="this.favorites.length"/>
-    <router-view :myFavorite="myFavorite" @favorites="favorites"/>
+    <router-view :myFavorite="favorites" @favorites="favorites"/>
   </div>
 </template>
 
 <script>
 import '@/assets/style.css'
 import Navigation from '@/components/Navigation'
+
 
 export default {
   data () {

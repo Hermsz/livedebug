@@ -32,6 +32,7 @@
 </template>
 
 <script>
+console.log('masukkkkkkkk navigation vue')
 export default {
   props: ['counter']
 }

@@ -7,6 +7,7 @@
           <input
             type="text"
             v-model="search"
+
             placeholder="Search Any Review"
             class="appearance-none bg-grey-lighter text-grey-darker border border-grey-lighter rounded-l py-3 pl-10 leading-tight focus:outline-none focus:bg-white focus:border-grey w-full"
           >
@@ -73,11 +74,15 @@
 <script>
 import Gallery from '@/components/Gallery.vue'
 
+
+
 export default {
-  data () {
-    const returnData = {
+  data() {
+    return {
+      returnData : {
       search: '',
       loading: false
+      }
     }
   },
 
